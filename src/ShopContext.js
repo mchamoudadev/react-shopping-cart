@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useReducer, useContext, useEffect } from "react";
 import shopReducer, { initialState } from "./shopReducer";
 
 const ShopContext = createContext(initialState);
@@ -62,6 +62,7 @@ export const ShopProvider = ({ children }) => {
     };
 
     const clearCart = () => {
+        localStorage.removeItem("cart_items");
         dispatch({
             type: "CLEAR_CART",
             payload: {

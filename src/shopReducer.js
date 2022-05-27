@@ -23,7 +23,7 @@ const shopReducer = (state, action) => {
                 total: payload.total
             };
         case "CLEAR_CART":
-            return { state: initialState };
+            return initialState;
         default:
             throw new Error("unkown reducer");
     }

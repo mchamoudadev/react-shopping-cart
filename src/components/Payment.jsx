@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { toast } from "react-toastify";
 import useShop from "../ShopContext";
@@ -8,6 +8,9 @@ const Payment = () => {
 	const { total, clearCart } = useShop();
 	const [phone, setPhone] = useState("");
 	const [loading, setLoading] = useState(false);
+	const [update, setUpdate] = useState(false);
+
+	useEffect(() => {}, [update]);
 
 	const initialState = {
 		evc: false,
@@ -19,6 +22,8 @@ const Payment = () => {
 
 	const submitForm = (event) => {
 		event.preventDefault();
+
+		console.log("tot", total);
 		if (JSON.stringify(paymentMethod) == JSON.stringify(initialState))
 			return toast.error("Please Select payment method");
 
@@ -60,13 +65,16 @@ const Payment = () => {
 			if (info.length == 1) {
 				clearCart();
 				toast.success("Thanks for shopping with us ...");
+				setUpdate(!update);
 			} else {
 				if (data.responseMsg.split("ERRCODE")[2].includes("4004")) {
 					toast.error("User rejected");
+					setUpdate(!update);
 				}
 
 				if (data.responseMsg.split("ERRCODE")[2].includes("6002")) {
 					toast.error("Numberka sirta ah waa khalad");
+					setUpdate(!update);
 				}
 			}
 		} catch (err) {
