@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.something {
+	background-color: green;
+	padding: 10px;
+	border-radius: 15px;
+	color: white;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.links a {
+	text-decoration: none;
+	margin: 10px;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.logo {
+	text-decoration: none;
+	margin: 10px;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 800;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.card {
+	/* margin: 20px auto;
+	width: 400px; */
+	/* padding: 10px; */
+	width: 100%;
+	height: 500px;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.card .info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* margin: 20px 0; */
+	color: #fff;
+	background-color: rgba(1, 1, 31, 0.405);
+	/* padding-bottom: 50px; */
+	padding: 20px 0;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.card span {
+	font-size: 1.75rem;
+}
+
+/* .info {
+	
+} */
+
+.price {
+	font-size: 18px;
+	font-style: italic;
+}
+.btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	padding: 10px 15px;
+	background-color: rgb(24, 119, 201);
+	color: #fff;
+	margin-top: 10px;
+	border: none;
+	border-radius: 50%;
+	font-size: 22px;
+	cursor: pointer;
+	right: 10px;
+}
+
+.cart {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgb(24, 119, 201);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.btn-secondary {
+	background-color: #d63535;
+}
+
+a {
+	text-decoration: none;
+}
+.cart-container {
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	border-radius: 10px;
+	grid-gap: 20px;
+	padding: 30px;
+	place-items: center;
+}
+
+.cart-products {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+	width: 95%;
+	padding: 20px;
+	border-right: 1px solid #ccc;
+}
+
+.cart-product {
+	padding: 10px;
+	width: 95%;
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr;
+	border-top: 1px solid #ccc;
+	place-content: center;
+}
+
+.cart-product img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.cart-product span {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.delete {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.cart-title-img {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+}
+
+.cart-title-img * {
+	padding: 0px 10px;
+}
+
+.total-price {
+	border-top: 1px solid #ccc;
+}
+
+.payment-card {
+	/* background-color: antiquewhite; */
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	padding: 0rem;
+	margin: 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.payment-card:hover,
+.payment-card.selected {
+	background-color: rgba(24, 118, 201, 0.159);
+	border-color: rgb(8, 92, 165);
+}
+
+.form-control {
+	width: 82%;
+	margin: 0 12px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	resize: vertical;
+	font-size: 20px;
+}
+
+.btn-proceed {
+	width: 94%;
+	margin: 10px 12px;
+	padding: 20px;
+	background-color: rgb(24, 119, 201);
+	color: #fff;
+	border: 0px;
+	border-radius: 15px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.btn-proceed:hover {
+	background-color: rgb(26, 102, 169);
+}
+
+.btn-proceed:disabled {
+	background-color: rgb(64, 132, 187);
+	cursor: not-allowed;
+}
+
+.loading {
+	font-size: 20px;
+	animation: spin 2s linear infinite;
+}
+
+footer {
+	padding: 30px;
+	text-align: center;
+	font-size: 25px;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
