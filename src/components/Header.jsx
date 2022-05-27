@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<div className="menu">
 			<Link to={"/"} className="logo">
-				{process.env.REACT_APP_SECRET_API_KEY}
+				{process.env.REACT_APP_NAME}
 			</Link>
 			<div className="links">
 				<Link to="/">Home</Link>
