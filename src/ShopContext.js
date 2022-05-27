@@ -1,4 +1,4 @@
-import { createContext, useReducer, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import shopReducer, { initialState } from "./shopReducer";
 
 const ShopContext = createContext(initialState);

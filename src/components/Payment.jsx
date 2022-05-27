@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
-import useShop from "../ShopContext";
-import { toast } from "react-toastify";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { toast } from "react-toastify";
+import useShop from "../ShopContext";
 
 const Payment = () => {
 	const { total, clearCart } = useShop();

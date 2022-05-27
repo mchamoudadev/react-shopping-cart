@@ -3,8 +3,6 @@ export const initialState = JSON.parse(localStorage.getItem("cart_items")) || {
     products: [],
 };
 
-console.log();
-
 const shopReducer = (state, action) => {
     const { type, payload } = action;
 
