@@ -1,29 +1,4 @@
-import { useEffect, useState } from "react";
-import useShop from "../ShopContext";
-
 const Product = ({ product, cart }) => {
-	const { addToCart, removeFromCart, products } = useShop();
-	const [isInCart, setIsInCart] = useState(true);
-	// console.log(products);
-
-	useEffect(() => {
-		const isCart = products.filter((pro) => pro.id == product.id);
-		// console.log("isCart", isCart.length);
-		if (isCart.length > 0) {
-			setIsInCart(true);
-		} else {
-			setIsInCart(false);
-		}
-	}, [products]);
-
-	const handleClick = () => {
-		if (isInCart) {
-			removeFromCart(product);
-		} else {
-			addToCart(product);
-		}
-	};
-
 	const style = {
 		minHeight: "100%",
 		background:
@@ -44,11 +19,7 @@ const Product = ({ product, cart }) => {
 				<span className="price">${product.price}</span>
 			</div>
 
-			<button
-				className={`btn ${isInCart ? "btn-secondary" : "btn-primary"}`}
-				onClick={handleClick}>
-				{isInCart ? "-" : "+"}
-			</button>
+			<button className={`btn btn-primary`}></button>
 		</div>
 	);
 };

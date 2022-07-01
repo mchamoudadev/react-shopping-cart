@@ -1,9 +1,6 @@
-import useShop from "../ShopContext";
 import { IoClose } from "react-icons/io5";
 
 const CartProducts = ({ products }) => {
-	const { total, removeFromCart } = useShop();
-
 	return (
 		<>
 			<div className="cart-products">
@@ -16,14 +13,13 @@ const CartProducts = ({ products }) => {
 						</div>
 
 						<h5>${product.price}</h5>
-						<span className="delete" onClick={() => removeFromCart(product)}>
+						<span className="delete">
 							<IoClose />
 						</span>
 					</div>
 				))}
 				<div className="total-price">
-					{/* <h4>Total Price</h4> */}
-					<h2>Total Price : ${total}</h2>
+					<h2>Total Price : 0</h2>
 				</div>
 			</div>
 		</>

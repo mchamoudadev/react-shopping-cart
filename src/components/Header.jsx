@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 import useShop from "../ShopContext";
 
 const Header = () => {
-	const { products } = useShop();
 	return (
 		<div className="menu">
 			<Link to={"/"} className="logo">
-				{process.env.REACT_APP_NAME}
+				REDUXIFY
 			</Link>
 			<div className="links">
 				<Link to="/">Home</Link>
@@ -15,7 +14,7 @@ const Header = () => {
 				<Link to="/cart">Cart</Link>
 			</div>
 			<Link to="/cart">
-				<span className="cart">{products.length}</span>
+				<span className="cart">{0}</span>
 			</Link>
 		</div>
 	);
